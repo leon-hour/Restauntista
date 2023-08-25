@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" type="text/css" href="payment.css" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  </head>
+
+  <body>
+    <div id="header-placeholder"></div>
+
+    <form id="payment-form" action="">
+      <label for="name">Name on card:</label>
+      <input type="text" id="name" name="name" required />
+
+      <label for="card-number">Card number:</label>
+      <input
+        type="text"
+        id="card-number"
+        name="card-number"
+        pattern="[0-9]{13,16}"
+        required
+      />
+
+      <label for="cvc">CVC:</label>
+      <input type="text" id="cvc" name="cvc" pattern="[0-9]{3,4}" required />
+
+      <label for="expiration-date">Expiration date:</label>
+      <input
+        type="text"
+        id="expiration-date"
+        name="expiration-date"
+        placeholder="MM / YY"
+        required
+      />
+
+      <button type="submit" id="pay-button">Pay</button>
+    </form>
+
+    <div id="success-message" style="display: none">
+      <p>
+        Thank you for your payment. Your order will be delivered within 1 hour.
+      </p>
+    </div>
+    <div id="footer-placeholder"></div>
+  </body>
+  <script src="main.js"></script>
+  <script src="payment.js"></script>
+  <script src="template.js"></script>
+</html>
